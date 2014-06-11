@@ -122,6 +122,12 @@ public class AchievementWindow extends JWindow {
 		// create a new icon
 		JLabel icon = new JLabel(config.getIcon());
 		contentPanel.add(icon, "cell 0 0 0 2, align center");
+		
+		// add botton
+		if(config.getButtonView() != null){
+                    AchievementButton button = config.getButtonView();
+                    contentPanel.add(button,button.getPosition());
+                }
 
 		// create the achievement title
 		String strTitle = String.format(
