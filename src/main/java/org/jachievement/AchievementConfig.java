@@ -68,6 +68,7 @@ public class AchievementConfig {
 	private long inDuration;
 	private long outDuration;
 	private long duration;
+	private AchievementButton buttonView;
 
 	// distance from screen
 	private int distanceFromScreen;
@@ -175,6 +176,7 @@ public class AchievementConfig {
 	public AchievementConfig() {
 
 		// set everything
+		buttonView = null;
 		titleFont = null;
 		descriptionFont = null;
 		titleColor = Color.BLACK;
@@ -284,6 +286,14 @@ public class AchievementConfig {
 	public void setTitleFont(Font titleFont) {
 		this.titleFont = titleFont;
 	}
+	
+	public AchievementButton getButtonView() {
+        	return buttonView;
+    	}
+
+    	public void setButtonView(AchievementButton buttonView) {
+		this.buttonView = buttonView;
+    	}
 
 	/**
 	 * Calculates the initial coordinates.
